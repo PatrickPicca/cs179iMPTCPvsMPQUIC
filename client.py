@@ -1,7 +1,7 @@
 import socket
 
 s = socket.socket()
-host = '10.10.1.1'
+host = '10.0.0.2'
 port = 60000
 
 s.connect((host, port))
