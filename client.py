@@ -7,7 +7,7 @@ port = 60000
 s.connect((host, port))
 s.send("Hello server!".encode())
 
-with open ('received_file', 'wb') as f:
+with open ('received_file.mp4', 'wb') as f:
     print ('file opened')
     while True:
         print('receiving data...')
