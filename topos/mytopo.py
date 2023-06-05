@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from mininet.net import Mininet
 from mininet.topo import Topo
@@ -19,7 +19,6 @@ def create_topology():
     controller = RemoteController('c0', ip='127.0.0.1', port=6653)  # Specify the Ryu controller
     net = Mininet(topo=topo, controller=controller)
     net.start()
-
     CLI(net)
     net.stop()
 

@@ -3,5 +3,5 @@
 # Run setup script that creates the client and server terminal.
 # NOT FINISHED: uploading and storing data obtained to github.
 
-sudo ./basic5Loss.py
+sudo ./topos/basic5Loss.py
 
