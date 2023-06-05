@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from mininet.net import Mininet
 from mininet.topo import Topo
