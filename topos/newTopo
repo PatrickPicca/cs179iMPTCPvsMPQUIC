@@ -11,8 +11,8 @@ class CustomTopo (Topo):
 
         switch1 = self.addSwitch('switch1')
 
-        client = self.addHost('client')
-        server = self.addHost('server')
+        client = self.addHost('client', ip='10.0.0.1')
+        server = self.addHost('server', ip='10.0.0.2')
 
         self.addLink(switch1, client)
         self.addLink(switch1, server)
