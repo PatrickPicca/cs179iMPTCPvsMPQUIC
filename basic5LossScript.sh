@@ -3,5 +3,7 @@
 # Run setup script that creates the client and server terminal.
 # NOT FINISHED: uploading and storing data obtained to github.
 
-sudo ./topos/basic5Loss.py
+sudo mn --custom ./topos/basic5Loss.py --topo=mytopo --nat --mac
+
+#sudo ./topos/basic5Loss.py
 
