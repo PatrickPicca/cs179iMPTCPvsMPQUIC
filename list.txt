@@ -1,2 +1,4 @@
-0 basic5Loss.py
-1 newTopo
+0 newTopo
+1 basic5Loss.py
+2 basic10LossMultiple.py
+3 MultiLossPaths.py
