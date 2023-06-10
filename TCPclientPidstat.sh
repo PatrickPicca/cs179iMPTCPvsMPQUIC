@@ -9,7 +9,7 @@ echo "$file_count"
 
 while true; do
   # Check if the process has started
-  if pgrep -f "$target_command" >/dev/null; then
+  if pgrep -f -n "$target_command" >/dev/null; then
     # Get process statistics
     echo "Found targeted process with PID: $(pgrep -f "$target_command")"
     thePID=$(pgrep -f -n "$target_command")
