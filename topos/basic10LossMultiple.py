@@ -18,8 +18,8 @@ class CustomTopo(Topo):
 
         self.addLink(client, switch1, cls=TCLink, delay='10ms')
         self.addLink(client, switch2, cls=TCLink, delay='10ms')
-        self.addLink(switch1, switch3, cls=TCLink, delay='100ms',bw=10)
-        self.addLink(switch2, switch3, cls=TCLink, delay='50ms',bw=10, loss=10)
+        self.addLink(switch1, switch3, cls=TCLink, delay='100ms',bw=100)
+        self.addLink(switch2, switch3, cls=TCLink, delay='50ms',bw=100, loss=10)
         self.addLink(switch3, server, cls=TCLink, delay='10ms')
         
 
