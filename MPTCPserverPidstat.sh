@@ -20,4 +20,3 @@ while true; do
   fi
   sleep 1
 done
-
