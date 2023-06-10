@@ -15,9 +15,9 @@ class CustomTopo (Topo):
         client = self.addHost('client', ip='10.0.0.1')
         server = self.addHost('server', ip='10.0.4.1')
 
-        self.addLink(client, switch1, cls=TCLink, delay='20ms')
-        self.addLink(switch1, switch2, cls=TCLink, delay='20ms') #this
-        self.addLink(switch2, server, cls=TCLink, delay='20ms') #this
+        self.addLink(client, switch1, cls=TCLink, delay='10ms')
+        self.addLink(switch1, switch2, cls=TCLink, delay='10ms',bw=10) #this
+        self.addLink(switch2, server, cls=TCLink, delay='10ms') #this
 
 
 topo = CustomTopo()
