@@ -22,6 +22,7 @@ The mptcpize command forces the any TCP socket program to run MPTCP on top of th
 Here are the listed instructions followed to run the MPQUIC:
 1. In an directory adjacent to this one run: 
        <br> git clone --recursive https://github.com/cloudflare/quiche
+        <br> The MPQUIC related scripts to run the client and server only work if the quiche directory is adjacent to this one.
 2. sudo apt install cmake
        <br> Default installation
        <br> Rust version 1.70.0
@@ -29,8 +30,9 @@ Here are the listed instructions followed to run the MPQUIC:
 4. source $HOME/.cargo/env
 5. cd quiche
 6. In the apps/src/bin folder of quiche, please transfer any files you wish for your MPQUIC server to provide.
-7. In the quiche.example folder, update the server.rs file by replacing the line 72 with the following:
-     mio::net::UdpSocket::bind("10.0.4.1:4433".parse().unwrap()).unwrap();
+7. In the quiche/example folder, update the server.rs file by replacing the line 72 with the following mio line:
+     <br> mio::net::UdpSocket::bind("10.0.4.1:4433".parse().unwrap()).unwrap();
+     <br> We update the IP in use as all mininet topologies assume the sever uses that IP.
 8. cargo test
     <br> This will build a number of supported packages for quiche
 9. In a mininet xterm run the following command: 
