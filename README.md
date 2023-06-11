@@ -3,7 +3,10 @@
 All comamnds performed assume you are in a linux environment. 
 
 Before you start:
-<br> Verify in your /etc/resolv.conf
+<br> Verify in your /etc/resolv.conf that you have the following:
+   <br>nameserver 8.8.8.8
+You have installed a working version of wireshark and xterm.
+
 
 Here are the listed instructions followed to run the MPTCP:
 1. sudo apt update
@@ -28,4 +31,8 @@ Here are the listed instructions followed to run the MPQUIC:
 6. In the apps/src/bin folder of quiche, please transfer any files you wish for your MPQUIC server to provide.
 7. cargo test
     <br> This will build a number of supported packages for quiche
-8. 
+8. In a mininet xterm run the following command: 
+<br> cargo run --bin quiche-client -- https://cloudflare-quic.com/ –config “net.git-fetch-with-cli=true”
+<br> You will need to run this commance atleast once as the xterm of seperateily fetch the cargo files.
+<br> After you do this, you will not need to do this again.
+
