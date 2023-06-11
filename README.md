@@ -3,9 +3,8 @@
 All comamnds performed assume you are in a linux environment. 
 
 Before you start:
-<br> Verify in your /etc/resolv.conf that you have the following:
-   <br>nameserver 8.8.8.8
-You have installed a working version of wireshark and xterm.
+<br> 1. Verify in your /etc/resolv.conf that you have the following nameserver: nameserver 8.8.8.8
+<br> 2. You have installed a working version of wireshark and xterm.
 
 
 Here are the listed instructions followed to run the MPTCP:
@@ -15,6 +14,7 @@ Here are the listed instructions followed to run the MPTCP:
     <br>mptcpize run -d python3 ./server.py
 4. In a mininet xterm for your desired client host, run the following command:
     <br>mptcpize run -d python3 ./client.py
+    <br> Both these scripts executes the Perf stat process onto the mptcpize client and server.
 
 The mptcpize command forces the any TCP socket program to run MPTCP on top of the process.
 
