@@ -29,10 +29,13 @@ Here are the listed instructions followed to run the MPQUIC:
 4. source $HOME/.cargo/env
 5. cd quiche
 6. In the apps/src/bin folder of quiche, please transfer any files you wish for your MPQUIC server to provide.
-7. cargo test
+7. In the quiche.example folder, update the server.rs file by replacing the line 72 with the following:
+     mio::net::UdpSocket::bind("10.0.4.1:4433".parse().unwrap()).unwrap();
+8. cargo test
     <br> This will build a number of supported packages for quiche
-8. In a mininet xterm run the following command: 
+9. In a mininet xterm run the following command: 
 <br> cargo run --bin quiche-client -- https://cloudflare-quic.com/ –config “net.git-fetch-with-cli=true”
 <br> You will need to run this commance atleast once as the xterm of seperateily fetch the cargo files.
 <br> After you do this, you will not need to do this again.
-
+10. To run the server run the command in a mininet server host: ./MPQUICserverScript.sh
+11. To run the client run the command in a mininet client host: ./MPQUICserverScript.sh
